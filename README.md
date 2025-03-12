@@ -1,43 +1,71 @@
-# outlook-voice-transcriber
-This script automatically transcribes voicemail messages received via Outlook email.
+#Outlook Voice Transcriber
 
-# How to Clone, Install, and Run Transcriber
-This guide will walk you through cloning the repository, installing dependencies, setting up a virtual environment, and running the Trabscriber script.
+#Overview
 
-1. Cloning the Repository
-   To get the repository
-   git clone https://github.com/MMaciel202/outlook-voice-transcriber.git
+This Python script automatically processes voicemail messages received via Outlook email, transcribes the audio using OpenAI Whisper, and sends the transcription back to the original recipient via email.
+
+Features
+•	Fetches emails from Outlook.
+•	Extracts and saves audio attachments.
+•	Transcribes audio using Whisper.
+•	Sends transcription back to the original recipient.
+
+Prerequisites
+•	The telephone system must be configured to send audio messages to your inbox.
+•	Python 3.8+
+•	Microsoft Outlook installed (for email access via COM interface)
+•	Required Python libraries: 
+   o	whisper
+   o	win32com.client
+   o	os
+   o	getpass
+•	FFmpeg is included in the repository, so no external installation is required.
+
+Installation
+1. Clone the Repository
+
+To get the repository, run:
+   git clone https://github.com/yourusername/outlook-voice-transcriber.git
    cd outlook-voice-transcriber
+   
+2. Create a Virtual Environment (Recommended)
+   
+To avoid dependency conflicts, create a virtual environment:
+•	Windows: 
+•	python -m venv venv
+•	venv\Scripts\activate
+•	MacOS/Linux: 
+•	python3 -m venv venv
+•	source venv/bin/activate
 
-2. Creating a Virtual Environment
-   It's recommended to use a virtual environment to avoid dependency conflicts.
+After activation, your terminal should show (venv) before the command prompt.
 
-   - Windows:
-     python -m venv venv
-     venv\Scripts\activate
-     
-   - MacOS/Linux:
-     python3 -m venv venv
-     source venv/bin/activate
-  After activation, your terminal should show (venv) before the command prompt.
+3. Install Dependencies
+   
+First, ensure pip is up to date:
 
-3.  Installing Dependencies
-    First, make sure you have pip up to date:
-    pip install --upgrade pip
-    Then, install the required dependencies:
-    pip install -r requirements.txt
+   pip install --upgrade pip
+   
+Then, install the required dependencies:
 
-4.  Install FFmpeg (Required for Audio Processing)
-    The script depends on FFmpeg for audio conversion. Install it as follows:
+   pip install -r requirements.txt
+   
+Configuration
 
-    - Windows: Download and install FFmpeg from the FFmpeg official site and add it to your system PATH.
-    - Linux: Install via package manager: sudo apt install ffmpeg #Debian/Ubuntu
-    - macOS: brew install ffmpeg #macOS (Homebrew)
+•	To change the sender's email address, edit the transcriber.py file and modify the SENDER_EMAIL variable at the top of the script: 
+•	SENDER_EMAIL = "your_sender_email@example.com".lower()
+•	Ensure the script has access to Outlook emails.
 
-5.  Run the Script
-    After installing all dependencies, run the script with:
-    python transcriber.py
+Usage
+Run the script with:
+python transcriber.py
 
+Notes
+•	Ensure Outlook is running and properly configured.
+•	Whisper may take some time to process large audio files.
+
+License
+This project is licensed under the MIT License.
     
       
 
