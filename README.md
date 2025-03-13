@@ -24,29 +24,29 @@ Prerequisites
 Installation
 1. Clone the Repository
 
-To get the repository, run:
+   To get the repository, run:
    git clone https://github.com/yourusername/outlook-voice-transcriber.git
    cd outlook-voice-transcriber
    
 2. Create a Virtual Environment (Recommended)
    
-To avoid dependency conflicts, create a virtual environment:
-•	Windows: 
-•	python -m venv venv
-•	venv\Scripts\activate
-•	MacOS/Linux: 
-•	python3 -m venv venv
-•	source venv/bin/activate
+   To avoid dependency conflicts, create a virtual environment:
+   •	Windows: 
+   •	python -m venv venv
+   •	venv\Scripts\activate
+   •	MacOS/Linux: 
+   •	python3 -m venv venv
+   •	source venv/bin/activate
 
-After activation, your terminal should show (venv) before the command prompt.
+   After activation, your terminal should show (venv) before the command prompt.
 
 3. Install Dependencies
    
-First, ensure pip is up to date:
+   First, ensure pip is up to date:
 
    pip install --upgrade pip
    
-Then, install the required dependencies:
+   Then, install the required dependencies:
 
    pip install -r requirements.txt
    
