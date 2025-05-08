@@ -28,7 +28,13 @@ Installation
    git clone https://github.com/yourusername/outlook-voice-transcriber.git
    cd outlook-voice-transcriber
    
-2. Create a Virtual Environment (Recommended)
+2. Unzip the file with 7Zip:
+   Choose one of the following:
+   Extract Here — extracts files to the current folder.
+   Extract to "<folder_name>" — extracts to a subfolder with the zip's name.
+   Extract files... — opens a dialog box to choose destination folder.
+
+3. Create a Virtual Environment (Recommended)
    
    To avoid dependency conflicts, create a virtual environment:
    •	Windows: 
@@ -40,7 +46,7 @@ Installation
 
    After activation, your terminal should show (venv) before the command prompt.
 
-3. Install Dependencies
+4. Install Dependencies
    
    First, ensure pip is up to date:
 
